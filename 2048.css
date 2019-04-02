@@ -1,0 +1,25 @@
+#board{
+    background: bisque;
+    margin: 0 auto;
+    width: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+#r0,#r1,#r2,#r3{
+    float: left;
+}
+.rc{
+    height: 90px;
+    width: 90px;
+    margin: 5px;
+    background: antiquewhite;
+    border-radius: 6px;
+}
+
+b{
+    color: tan;
+    margin-left: 25px;
+    font-size: 60px;
+    vertical-align:middle;
+
+}
