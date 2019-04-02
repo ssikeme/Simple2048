@@ -12,14 +12,102 @@
     height: 90px;
     width: 90px;
     margin: 5px;
-    background: antiquewhite;
+    background: white;
     border-radius: 6px;
+    text-align: center;
+    vertical-align:middle;
+    font-size: 300%;
 }
 
 b{
-    color: tan;
-    margin-left: 25px;
-    font-size: 60px;
-    vertical-align:middle;
+    color: #a0522d;
 
+
+}
+button{
+    width: 50px;
+    height: 50px;
+    border-width: 0px;
+    border-radius: 3px;
+    background: burlywood;
+    cursor: pointer;
+    outline: none;
+    font-family: Microsoft YaHei;
+    color: white;
+    font-size: 18px;
+}
+#lose{
+    position: absolute;
+    margin-left: 900px;
+    margin-top: -380px;
+}
+#restart{
+    position: absolute;
+    margin-left: 900px;
+    margin-top: -320px;
+}
+button:hover{
+    color: bisque;
+    background: tan;
+}
+
+.color-0{
+    background: white;
+}
+
+.color-2{
+    background: #fdfde6;
+}
+.color-4{
+
+    background: #ffefd5;
+}
+.color-8{
+    background: #ffdead;
+}
+.color-16{
+    background: #deb887;
+}
+.color-32{
+    background: #cd853f;
+}
+.color-64{
+    background: #ffa550;
+}
+.color-128{
+    background:#ffd700;
+}
+.color-256{
+    background: #ffff00;
+}
+.color-512{
+    background: #f08080;
+}
+.color-1024{
+    background: #ff6347;
+}
+.color-2048{
+    background: #800000;
+
+}
+.big b{
+    font-size: 20%;
+}
+#mark{
+    position: absolute;
+    margin-left: 900px;
+    margin-top: -260px;
+    text-align: center;
+    vertical-align: middle;
+    background: burlywood;
+    border-radius: 3px;
+    width: 60px;
+    height: 60px;
+}
+#fenshu{
+    font-size: 20px;
+    font-weight: normal;
+}
+#ans{
+    font-size: 25px;
 }
