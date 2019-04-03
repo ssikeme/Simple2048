@@ -6,7 +6,17 @@
     <link rel="stylesheet" type="text/css" href="2048.css">
 </head>
 <body>
-    <div id="board">
+
+    <div id="total">
+        <div id="nav">
+
+            <div id="restart-div"><button onclick="restart()" id="restart">重启</button></div>
+            <div id="mark">
+                <b id="score">分数</b><br>
+                <b id="ans"></b>
+            </div>
+        </div>
+        <div id="board">
         <div id="r0">
             <div id="r0c0" class="rc"></div>
             <div id="r0c1" class="rc"></div>
@@ -32,10 +42,12 @@
         <div id="r3c3" class="rc"></div>
     </div>
     </div>
-    <button onclick="lose()" id="lose">结束</button>
-    <button onclick="restart()" id="restart">重启</button>
-    <div id="mark"></div>
-    <div id="lose-interface"></div>
+    </div>
+    <div id="gameover-div">
+        <div id="gameover"><b>Game Over!</b></div>
+        <b id="final-score"></b><br>
+        <b id="try-again">try again</b>
+    </div>
     <script src="2048.js"></script>
 </body>
 </html>

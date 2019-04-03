@@ -1,3 +1,6 @@
+#total{
+    margin: 0 auto;
+}
 #board{
     background: bisque;
     margin: 0 auto;
@@ -19,6 +22,8 @@
     font-size: 300%;
 }
 
+
+
 b{
     color: #a0522d;
 
@@ -36,19 +41,47 @@ button{
     color: white;
     font-size: 18px;
 }
-#lose{
-    position: absolute;
-    margin-left: 900px;
-    margin-top: -380px;
-}
-#restart{
-    position: absolute;
-    margin-left: 900px;
-    margin-top: -320px;
-}
 button:hover{
     color: bisque;
     background: tan;
+}
+#nav{
+    width:130px;
+    margin: 0 auto;
+}
+
+
+#restart-div{
+
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    background: burlywood;
+    border-radius: 3px;
+    width: 60px;
+    height: 60px;
+
+
+}
+#mark{
+
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    background: burlywood;
+    border-radius: 3px;
+    width: 60px;
+    height: 60px;
+
+
+}
+#score{
+    font-size: 20px;
+    font-weight: normal;
+}
+#ans{
+    margin: 0 auto;
+    font-size: 25px;
 }
 
 .color-0{
@@ -93,21 +126,31 @@ button:hover{
 .big b{
     font-size: 20%;
 }
-#mark{
+
+#gameover-div{
     position: absolute;
-    margin-left: 900px;
-    margin-top: -260px;
+    z-index: 100;
+    margin-left: 35%;
+    margin-top: -300px;
+    width: 400px;
     text-align: center;
-    vertical-align: middle;
-    background: burlywood;
-    border-radius: 3px;
-    width: 60px;
-    height: 60px;
+
 }
-#fenshu{
-    font-size: 20px;
+#gameover-div{
+    visibility: hidden;
+}
+#gameover,#final-score{
+    font-size: 60px;
+
+}
+#try-again {
+    font-size: 30px;
+    color: white;
     font-weight: normal;
+    background: #8f7a66;
+    border-radius: 3px;
+    cursor: pointer;
 }
-#ans{
-    font-size: 25px;
+#try-again:hover{
+    background: tan;
 }
