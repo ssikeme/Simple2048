@@ -46,12 +46,12 @@ button:hover{
     background: tan;
 }
 #nav{
-    width:130px;
+    width:200px;
     margin: 0 auto;
 }
 
 
-#restart-div{
+#restart-div,#mark,#retreat-div{
 
     display: inline-block;
     text-align: center;
@@ -63,18 +63,7 @@ button:hover{
 
 
 }
-#mark{
 
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    background: burlywood;
-    border-radius: 3px;
-    width: 60px;
-    height: 60px;
-
-
-}
 #score{
     font-size: 20px;
     font-weight: normal;

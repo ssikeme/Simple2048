@@ -3,6 +3,9 @@ window.onload = function () {
 };
 let tryagain=document.getElementById("try-again");
 let ans=0;
+let state=[ ];
+let scorestate=[ ];
+let statenum=-1;
 let mark=document.getElementById("ans");
 mark.innerHTML=ans;
 let rcs = document.getElementsByClassName("rc");
@@ -45,6 +48,15 @@ function randomGeneration() {
     else {//满格
         if(is_Lose()===true) lose_f();//满格且为输
     }
+    //记录当前状态
+    var tmp=new Array();
+    for(var i=0;i<4;i++)tmp[i]=new Array(4);
+    for(let i=0;i<4;i++)
+        for(let j=0;j<4;j++)
+            tmp[i][j]=board[i][j];
+    scorestate[statenum+1]=ans;
+    state[statenum+1]= [].concat(tmp);
+    statenum++;
 }
 
 
@@ -196,6 +208,7 @@ document.onkeydown = function (ev) {
     mark.innerHTML=ans;
     renderBoard();
     randomGeneration();
+
 };
 
 tryagain.onclick=function () {
@@ -225,6 +238,7 @@ function is_Lose() {
 }
 
 function restart() {
+    statenum=-1,state=[ ],scorestate=[ ];
     init();
     renderBoard();
     randomGeneration();
@@ -234,4 +248,18 @@ function restart() {
     gameover.style.visibility="hidden";
     let ans=document.getElementById("ans");
     ans.innerHTML="0";
+}
+function retreat() {
+    if(statenum<1){mark.innerHTML="0";}
+    else {
+        mark.innerHTML=scorestate[statenum-1];
+        let tmp=new Array();
+        for(let i=0;i<4;i++)tmp[i]=new Array(4);
+        tmp=state[statenum-1].slice();
+        for(let i=0;i<4;i++)
+            for(let j=0;j<4;j++)
+                board[i][j]=tmp[i][j];
+        renderBoard();
+        statenum--;
+    }
 }
